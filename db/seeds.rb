@@ -11,7 +11,7 @@ Contact.destroy_all
 
 
 
-u1 = User.create(username: "dave", password: "Dave", firstname: 'David', lastname: 'Caldwell')
+u1 = User.create(username: "dave", password: "Dave", password_confirmation: "Dave", firstname: 'David', lastname: 'Caldwell')
 
 # u2 = User.create(first_name: 'John', last_name: 'Johnson')
 # u3 = User.create(first_name: 'Steven', last_name: 'Nguyen')

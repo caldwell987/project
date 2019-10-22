@@ -1,18 +1,57 @@
-<%= form_for @user do |f| %>
-<h3>Edit a New User</h3>
-<br>
-<p> 
-Username: <br>
-<%= f.text_field :username %><br><br>
-Password:<br>
-<%= f.password_field :password %><br><br>
-Confirm Password:<br>
-<%= f.text_field :password_confirmation %><br><br>
-First Name:<br>
-<%= f.text_field :firstname %><br><br>
-Last Name:<br>
-<%= f.text_field :lastname %><br><br>
-<p>
+<div class="row">
+  <div class="col">Home</div>
+  <div class="col">Profile</div>
+  <div class="col">Friends</div>
+  <div class="col">
+  
+  <!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+  Register
+</button>
 
-<%= f.submit %>
-<% end %>
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+
+        <%= form_for @user do |f| %>
+
+        <%= f.label :first_name %>
+        <%= f.text_field :firstname %>
+        <%= tag.br %>
+
+        <%= f.label :last_name %>
+        <%= f.text_field :lastname %>
+        <%= tag.br %>
+
+        <%= f.label :username %>
+        <%= f.text_field :username%>
+        <%= tag.br %>
+
+        <%= f.label :password %>
+        <%= f.password_field :password %>
+        <%= tag.br %>
+
+        <%= f.label :password_confirmation %>
+        <%= f.password_field :password_confirmation %>
+        <%= tag.br %>
+
+      </div>
+      <div class="modal-footer">
+        
+        <%= f.submit class: "btn btn-primary"%>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+
+</div>
+</div>

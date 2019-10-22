@@ -14,3 +14,12 @@
     
 
 <%= console %>
+
+
+<%= tag.p "Hola #{@user.username}!" %>
+
+<%= form_with url:'/logout', method: 'delete' do |f| %>
+
+<%= f.submit "Logout" %>
+
+<% end %>
