@@ -1,0 +1,18 @@
+<%= form_for @user do |f| %>
+<h3>Edit a New User</h3>
+<br>
+<p> 
+Username: <br>
+<%= f.text_field :username %><br><br>
+Password:<br>
+<%= f.password_field :password %><br><br>
+Confirm Password:<br>
+<%= f.text_field :password_confirmation %><br><br>
+First Name:<br>
+<%= f.text_field :firstname %><br><br>
+Last Name:<br>
+<%= f.text_field :lastname %><br><br>
+<p>
+
+<%= f.submit %>
+<% end %>
